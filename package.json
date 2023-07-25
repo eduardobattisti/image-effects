@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/eduardobattisti/image-effects#readme",
   "devDependencies": {
+    "@wasm-tool/wasm-pack-plugin": "^1.7.0",
     "html-webpack-plugin": "^5.5.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
