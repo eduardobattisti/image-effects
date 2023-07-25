@@ -7,8 +7,6 @@ async function init() {
     console.error(error);
     return;
   }
-
-  console.log(rustApp);
   
   const fileReader = new FileReader();
   const input = document.getElementById('upload');
@@ -18,7 +16,9 @@ async function init() {
       /^data:image\/(png|jpeg|jpg);base64,/,
       ''
     );
-    console.log(base64);
+    
+    const imgDataURL = rustApp.grayscale(base64);
+    document.getElementById('new-img').setAttribute('src', imgDataURL);
   }
 
   input.addEventListener('change', () => {
