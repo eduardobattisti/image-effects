@@ -1,4 +1,15 @@
-function init() {
+async function init() {
+  let rustApp = null;
+
+  try {
+    rustApp = await import ('../pkg');
+  } catch (error) {
+    console.error(error);
+    return;
+  }
+
+  console.log(rustApp);
+  
   const fileReader = new FileReader();
   const input = document.getElementById('upload');
 
